@@ -1,0 +1,227 @@
+body {
+	background-image: url("SUGGESTIONS.jpg");
+}
+
+
+.header{
+	background-image: url("head-image.jpg");
+	background-size: 50%;
+	color: white;
+	height: 150px;
+}
+
+.header img {
+	float: left;
+	height: 100px;
+}
+
+
+/* Navigation Bar */
+nav {
+	overflow: hidden;
+	background-color: #D3D3D0;
+	color: black;
+}
+
+
+nav a {
+	float: left;
+	color: black;
+	font-size: 17px;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+}
+
+
+nav a.active {
+	background-color: red;
+}
+
+
+.account {
+	float: right;
+	overflow: hidden;
+}
+
+
+.account .dropBtn {
+	font-size: 17px;
+	padding: 14px;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font: inherit;
+	margin: 0;
+	width: 170px;
+}
+
+
+nav a:hover, .account:hover .dropBtn {
+	background-color: red;
+}
+
+
+.account-dropDown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 170px;
+}
+
+
+.account-dropDown-content a {
+	float: none;
+	background-color: #D3D3D0;
+	color: black;
+	display: block;
+	text-align: left;
+}
+
+
+.account-dropDown-content a:hover {
+	background-color: E92929;
+}
+
+
+.account:hover .account-dropDown-content {
+	display: block;
+}
+
+
+
+
+/* Content */
+.content div {
+	display: inline;
+	float: left;
+}
+
+
+/* Search */
+.content .search {
+	float: left;
+	width: 15%;
+	min-height: 150%;
+	padding: 20px;
+	border-radius: 10px;
+	background: linear-gradient(to top right, #6666ff 0%, #ff6666 100%);
+}
+
+.content .search form {
+	font-size: 20;
+}
+
+.content .search form input[type=text] {
+	width: 200px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	background-image: url("SEARCH.png");
+	background-size: 20px;
+	background-position: 10px 8px;
+	background-repeat: no-repeat;
+	padding: 10px 10px 10px 40px;
+	transition: width 0.5s ease-in-out;
+}
+
+.content .search form input[type=text]:focus {
+	width: 240px;
+}
+
+.content .search form input[type=submit] {
+	font-size: 17;
+	border-radius: 5px;
+}
+
+.content .search .categories, .brands {
+	width: 80%;
+	padding: 10px;
+	margin: 15px 0px 15px 0px;
+	border-radius: 10px;
+	background: linear-gradient(to top right, #3399ff 0%, #99ffcc 100%);
+}
+
+.content .search a {
+	text-decoration: none;
+	color: black;
+}
+
+.content .search a:hover {
+	color: red;
+}
+
+
+/* Page Content */
+.content .PageContent {
+	float: right;
+	width: 78%;
+	min-height: 150%;
+	padding: 20px;
+	border-radius: 10px;
+	background: linear-gradient(to top left, #3399ff 0%, #00ff99 100%);
+}
+
+.content .PageContent .PCHeading {
+	font-size: 20;
+	Text-align: center;
+	width: 100%;
+}
+
+
+
+
+hr {
+	background-color: black;
+	border: 1px solid;
+}
+
+
+table {
+	font-size: 20;
+	width: 100%;
+	border-spacing: 10px;
+	max-width: 1100px;
+	margin: auto;
+}
+
+td {
+	text-align: left;
+	vertical-align: top;
+	padding: 10px 10px 30px 10px;
+	border-bottom: 3px solid;
+}
+
+td a {
+	color: black;
+	text-decoration: none;
+}
+
+
+
+.shoe_image {
+	width: 200px;
+	height: 150px;
+	border-radius: 10px;
+}
+
+
+
+.brand {
+	width: 200px;
+	padding-left: 10px;
+	height: 150px;
+}
+
+
+
+.buy_now {
+	width: 110px;
+	height: 40px;
+	vertical-align: top;
+}
+
+.add_to_cart {
+	width: 110px;
+	height: 60px;
+}

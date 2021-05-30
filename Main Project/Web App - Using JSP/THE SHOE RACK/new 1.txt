@@ -1,0 +1,166 @@
+<%@page import = "java.sql.*"%>
+<%@page import = "java.text.SimpleDateFormat" %>
+
+<html>
+<head>
+	<title>SEARCH</title>
+	<link rel="stylesheet" href="SEARCH.css">
+	<script src="SEARCH.js"></script>
+</head>
+
+<body>
+	<%!
+		String SearchButton, SEARCH;
+	%>
+	<div class="header">
+		<br>
+		<h1>&nbsp THE SHOE RACK</h1>
+		<p>&nbsp &nbsp &nbsp Put your best feet forward</p>
+	</div>
+	
+	<nav>
+		<a href="HOME.jsp">HOME</a>
+		<a href="SUGGESTIONS.jsp">SUGGESTIONS</a>
+		<a href="LATEST DEALS.jsp">LATEST DEALS</a>
+		<a href="ABOUT US.jsp">ABOUT US</a>
+		<a href="CONTACT US.jsp">CONTACT US</a>
+		<% 
+			String SF = request.getParameter("SearchField");
+			
+			if (SearchButton != null) { %>
+				<a class="active" href="SEARCH.jsp?value=<%=request.getParameter("value")%> ">SEARCH</a>
+			<% }
+			else { %>
+				<a class="active" href="SEARCH.jsp?value=<%=request.getParameter("value")%> ">SEARCH</a>
+			<% }
+		%>
+		
+		
+			
+		<div class="account">
+			<button class="dropBtn">ACCOUNT</button>
+			
+			<div class="account-dropDown-content">
+				<% if (session.getAttribute("userID") == null) {%>
+					<a href="SIGN IN.jsp">SIGN IN</a>
+					<a href="SIGN UP.jsp">New to THE SHOE RACK? SIGN UP</a>
+				<% }
+				else { %>
+					<a href="SIGN OUT.jsp">SIGN OUT</a>
+					<a href="MY ACCOUNT.jsp">MY ACCOUNT</a>
+				<% } %>
+			</div>
+		</div>
+	</nav>
+	
+	<br>
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="search">
+			<form name="SearchBar" onSubmit="return validateForm()" action="SEARCH.jsp" method="post">
+				<%
+					SearchButton = request.getParameter("SearchButton");
+					
+					if (SearchButton != null) {
+						SEARCH = request.getParameter("Search");
+					}
+					else {
+						SEARCH = request.getParameter("Search");
+					}
+				%>
+				
+				<input type="hidden" name="SearchField" value=<%= SEARCH%>> <br> <br>
+				
+				<input type="text" name="Search" placeholder="Search"> <br> <br>
+				<input type="submit" name="SearchButton" value="Search"> <br> <br>
+				
+				<div class="categories">
+					<b>Categories:</b>
+					<ul style="list-style-type:none">
+						<li><a href="SEARCH.jsp?value=Sports">Sports</a><li>
+						<li><a href="SEARCH.jsp?value=Casual">Casual</a><li>
+						<li><a href="SEARCH.jsp?value=Formal">Formal</a><li>
+						<li><a href="SEARCH.jsp?value=Fashionable">Fashionable</a><li>
+						<li><a href="SEARCH.jsp?value=Daily Use">Daily Use</a><li>
+						<li><a href="SEARCH.jsp?value=Tracking">Tracking</a><li>
+						<li><a href="SEARCH.jsp?value=Rough Use">Rough Use</a><li>
+						<li><a href="SEARCH.jsp?value=Laceless">Laceless</a><li>
+					</ul>
+				</div>
+				
+				<div></div>
+				
+				<div class="brands">
+					<b>Brands:</b>
+					<ul style="list-style-type:none">
+						<li><a href="SEARCH.jsp?value=Woodland">Woodland</a><li>
+						<li><a href="SEARCH.jsp?value=Puma">Puma</a><li>
+						<li><a href="SEARCH.jsp?value=Nike">Nike</a><li>
+						<li><a href="SEARCH.jsp?value=Reebok">Reebok</a><li>
+						<li><a href="SEARCH.jsp?value=Adidas">Adidas</a><li>
+						<li><a href="SEARCH.jsp?value=Bata">Bata</a><li>
+						<li><a href="SEARCH.jsp?value=Converse">Converse</a><li>
+						<li><a href="SEARCH.jsp?value=Jordan">Jordan</a><li>
+						<li><a href="SEARCH.jsp?value=Bostonia">Bostonia</a><li>
+						<li><a href="SEARCH.jsp?value=Testoni">Testoni</a><li>
+					</ul>
+				</div>
+			</form>
+		</div>
+		
+		&nbsp &nbsp &nbsp &nbsp &nbsp
+		<div class="PageContent">
+			<div class="PCHeading">
+				<h2>Search</h2>
+			</div>
+			
+			<%
+				Connection conn = null;
+				Statement st;
+				ResultSet rs;
+				
+				try {
+					Class.forName("oracle.jdbc.driver.OracleDriver");
+					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "uditya", "uditya1234");
+					
+					SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+					
+					st = conn.createStatement();
+					
+					String query = "Select * from SHOES where  NAME = '" + SEARCH + "'  or  BRAND = '" + SEARCH + "'  or  CATEGORY = '" + SEARCH + "'";
+					rs = st.executeQuery(query);
+					
+					if (rs.next()) { %>
+						<table>
+							<% do { %>
+								<tr>
+									<td>
+										<%= rs.getString("BRAND") %> <br>
+										<%= rs.getString("NAME") %> <br> <br>
+										<%= rs.getString("CATEGORY") %>
+									<td>
+									
+									<td>
+										<%= formatter.format(rs.getDate("LAUNCH_DATE")) %> <br>
+										Rs. <%= rs.getString("PRICE") %>
+									<td>
+								<tr>
+							<% } while (rs.next());%>
+						</table>
+					<% }
+					else { %>
+						<p>
+							Sorry! <br>
+							No results were found.
+						</p>
+					<% }
+				}
+				catch (Exception e) {
+					out.println("Exception: " + e.getMessage() + "");
+				}
+			%>
+		<div>
+	<div>
+</body>
+</html>

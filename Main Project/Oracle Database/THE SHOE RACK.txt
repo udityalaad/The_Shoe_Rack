@@ -1,0 +1,173 @@
+create table USERS
+  (
+   FIRST_NAME varchar2(20) Not Null,
+   MIDDLE_NAME varchar2(20),
+   LAST_NAME varchar2(20) Not Null,
+   
+   EMAIL_ID varchar2(50) Primary Key,
+   MOBILE_NO number(20) Unique Not Null,
+   NATIONALITY varchar2(20) Not Null,
+   
+   PASSWORD varchar2(20) Not Null,
+   
+   DOB date not null,
+   GENDER varchar2(20) Not Null,
+   
+   BIRTH_PLACE varchar2(20) Not Null,
+   FIRST_PET varchar2(20) Not Null,
+   FAVORITE_DISH varchar2(20) Not Null,
+   
+   PREF_SHOE_CAT varchar(100),
+   PREF_SHOE_BRAND varchar(100)
+  )
+
+
+create table ADDRESS
+  (
+   EMAIL_ID varchar2(50) Primary Key,
+   H_F_N number(10) Not Null,
+   S_B_C varchar2(20) Not Null,
+   CITY varchar2(20) Not Null,
+   STATE varchar2(20) Not Null,
+   COUNTRY varchar2(20) Not Null,
+   POSTAL_CODE number(10) Not Null
+  )
+
+
+create table MESSAGE_DETAILS
+  (
+   MESSAGE_NO number(10) Primary Key,
+   NAME varchar2(100) Not Null,
+   EMAIL_ID varchar2(50) Not Null,
+   MOBILE_NO number(20) Not Null,
+   MESSSAGE varchar2(1000) Not Null,
+   RATING varchar2(20) Not Null
+  )
+
+
+create table SHOES
+  (
+   SHOE_NO number(10) Primary Key,
+   NAME varchar2(50) Not Null,
+   BRAND varchar2(50) Not Null,
+   CATEGORY varchar2(50) Not Null,
+   LAUNCH_DATE date Not Null,
+   PRICE number(10) Not Null
+  )
+
+
+
+
+desc USERS;
+desc ADDRESS;
+desc MESSAGE_DETAILS;
+desc SHOES;
+
+
+
+
+insert all
+  into USERS values('Paresh', 'Pranal', 'Zambaulikar', 'pareshzambaulikar@outlook.com', 9389213136, 'Indian', 'Paresh@1234', '18-MAR-1985', 'Male', 'Margao', 'Ron', 'Biryani', 'Fashionable,Rough Use', 'Jordan,Testoni')
+  into USERS values('Durva', 'Vishal', 'Naik', 'durvanaik@yahoo.com', 9341111512, 'Indian', 'Durva@1234', '25-DEC-1977', 'Female', 'Margao', 'Richard', 'Chicken Chilly', 'Casual,Formal', 'Woodland')
+  into USERS values('Keval', 'Suraj', 'Borkar', 'kevalborkar@outlook.com', 9923321271, 'Indian', 'Keval@1234', '12-AUG-1987', 'Male', 'Panjim', 'Snow', 'Hakka Noodles', 'Casual,Fashionable', 'Converse')
+  into USERS values('Uditya', 'Uday', 'Laad', 'laaduditya123@gmail.com', 9673599997, 'Indian', 'Uditya@1234', '8-AUG-1996', 'Male', 'Margao', 'Jack', 'Butter Chicken', 'Daily Use', 'Converse,Jordan')
+  into USERS values('Sarthi', 'Akash', 'Lotlikar', 'sarthilotlikar@gmail.com', 9898954321, 'Indian', 'Sarthi@1234', '7-MAR-1969', 'Female', 'Ponda', 'Tom', 'Cake', 'Sports,Casual', 'Reebok,Testoni')
+select * from dual;
+
+
+insert all
+  into ADDRESS values('pareshzambaulikar@outlook.com', 23, 'Zambaulim', 'Quepem', 'Goa', 'India', '403706')
+  into ADDRESS values('durvanaik@yahoo.com', 234, 'Nageshi', 'Ponda', 'Goa', 'India', '403706')
+  into ADDRESS values('kevalborkar@outlook.com', 65, 'Porvorim', 'Panaji', 'Goa', 'India', '403706')
+  into ADDRESS values('laaduditya123@gmail.com', 143, 'Kakoda', 'Curchorem', 'Goa', 'India', '403706')
+  into ADDRESS values('sarthilotlikar@gmail.com', 87, 'Banaulim', 'Margao', 'Goa', 'India', '403706')
+select * from dual;
+
+
+insert all
+  into MESSAGE_DETAILS values(10001, 'Durva Vishal Naik', 'durvanaik@yahoo.com', 9341111512, 'Did not receive previous order. Order No: 10021', 'None')
+  into MESSAGE_DETAILS values(10002, 'Ishan Akshay Gude', 'ishangude@yahoo.com', 9345645655, 'Having problems creating an account. Please help.', 'Good')
+  into MESSAGE_DETAILS values(10003, 'Vijay Ajay Naik', 'vijaynaik@outlook.com', 9925345655, 'Do you provide 30-days replacement policy?', 'Amazing')
+  into MESSAGE_DETAILS values(10004, 'Kaushik Nilesh Naik', 'kaushiknaik@yahoo.com', 9344522567, 'You need to make your interface more user friendly.', 'Average')
+  into MESSAGE_DETAILS values(10005, 'Uditya Uday Laad', 'laaduditya123@gmail.com', 9673599997, 'I have still not received the refund of my last order cancellation. Its been over 2 months.', 'Bad')
+select * from dual;
+
+
+insert all
+  into SHOES values(11001, 'Product WA', 'Woodland', 'Laceless', '28-Oct-2015', 5000)
+  into SHOES values(11002, 'Product WB', 'Woodland', 'Formal', '05-Feb-2018', 10000)
+  into SHOES values(11003, 'Product WC', 'Woodland', 'Casual', '22-Aug-2017', 7000)
+  into SHOES values(11004, 'Product WD', 'Woodland', 'Fashionable', '15-Jul-2013', 12000)
+  into SHOES values(11005, 'Product WE', 'Woodland', 'Daily Use', '13-Oct-2015', 11000)
+  
+  into SHOES values(12001, 'Product PA', 'Puma', 'Sports', '15-Feb-2018', 5000)
+  into SHOES values(12002, 'Product PB', 'Puma', 'Casual', '21-Jan-2015', 10000)
+  into SHOES values(12003, 'Product PC', 'Puma', 'Tracking', '22-Mar-2018', 7000)
+  into SHOES values(12004, 'Product PD', 'Puma', 'Rough Use', '05-Jun-2016', 12000)
+  into SHOES values(12005, 'Product PE', 'Puma', 'Fashionable', '16-Dec-2017', 11000)
+  
+  into SHOES values(13001, 'Product NA', 'Nike', 'Laceless', '30-Aug-2016', 5000)
+  into SHOES values(13002, 'Product NB', 'Nike', 'Formal', '21-Mar-2018', 10000)
+  into SHOES values(13003, 'Product NC', 'Nike', 'Casual', '12-Jun-2017', 7000)
+  into SHOES values(13004, 'Product ND', 'Nike', 'Fashionable', '14-Jan-2018', 12000)
+  into SHOES values(13005, 'Product NE', 'Nike', 'Daily Use', '25-Nov-2017', 11000)
+select * from dual;
+
+
+insert all
+  into SHOES values(14001, 'Product RA', 'Reebok', 'Sports', '22-Sep-2016', 5000)
+  into SHOES values(14002, 'Product RB', 'Reebok', 'Casual', '27-Jun-2017', 10000)
+  into SHOES values(14003, 'Product RC', 'Reebok', 'Tracking', '14-Mar-2018', 7000)
+  into SHOES values(14004, 'Product RD', 'Reebok', 'Rough Use', '08-Oct-2017', 12000)
+  into SHOES values(14005, 'Product RE', 'Reebok', 'Fashionable', '11-Feb-2018', 11000)
+  
+  into SHOES values(15001, 'Product AA', 'Adidas', 'Laceless', '23-Jun-2014', 5000)
+  into SHOES values(15002, 'Product AB', 'Adidas', 'Formal', '21-Feb-2018', 10000)
+  into SHOES values(15003, 'Product AC', 'Adidas', 'Casual', '29-Jul-2016', 7000)
+  into SHOES values(15004, 'Product AD', 'Adidas', 'Fashionable', '12-Dec-2015', 12000)
+  into SHOES values(15005, 'Product AE', 'Adidas', 'Daily Use', '16-Dec-2017', 11000)
+  
+  into SHOES values(16001, 'Product BaA', 'Bata', 'Sports', '17-Jan-2018', 5000)
+  into SHOES values(16002, 'Product BaB', 'Bata', 'Casual', '21-Dec-2015', 10000)
+  into SHOES values(16003, 'Product BaC', 'Bata', 'Tracking', '12-Feb-2017', 7000)
+  into SHOES values(16004, 'Product BaD', 'Bata', 'Rough Use', '04-Sep-2016', 12000)
+  into SHOES values(16005, 'Product BaE', 'Bata', 'Fashionable', '22-Oct-2014', 11000)
+select * from dual;
+
+
+insert all
+  into SHOES values(17001, 'Product CA', 'Converse', 'Laceless', '17-Feb-2014', 5000)
+  into SHOES values(17002, 'Product CB', 'Converse', 'Formal', '09-Nov-2017', 10000)
+  into SHOES values(17003, 'Product CC', 'Converse', 'Casual', '13-Mar-2018', 7000)
+  into SHOES values(17004, 'Product CD', 'Converse', 'Fashionable', '28-Apr-2016', 12000)
+  into SHOES values(17005, 'Product CE', 'Converse', 'Daily Use', '18-Jul-2013', 11000)
+  
+  into SHOES values(18001, 'Product JA', 'Jordan', 'Sports', '13-Dec-2014', 5000)
+  into SHOES values(18002, 'Product JB', 'Jordan', 'Casual', '07-Mar-2018', 10000)
+  into SHOES values(18003, 'Product JC', 'Jordan', 'Tracking', '08-Oct-2016', 7000)
+  into SHOES values(18004, 'Product JD', 'Jordan', 'Rough Use', '22-FEB-2013', 12000)
+  into SHOES values(18005, 'Product JE', 'Jordan', 'Fashionable', '04-Apr-2018', 11000)
+  
+  into SHOES values(19001, 'Product BoA', 'Bostonia', 'Laceless', '21-Sep-2017', 5000)
+  into SHOES values(19002, 'Product BoB', 'Bostonia', 'Formal', '08-Feb-2018', 10000)
+  into SHOES values(19003, 'Product BoC', 'Bostonia', 'Casual', '16-Oct-2015', 7000)
+  into SHOES values(19004, 'Product BoD', 'Bostonia', 'Fashionable', '17-Jan-2018', 12000)
+  into SHOES values(19005, 'Product BoE', 'Bostonia', 'Daily Use', '01-Dec-2016', 11000)
+select * from dual;
+
+
+insert all
+  into SHOES values(21001, 'Product TA', 'Testoni', 'Sports', '06-Aug-2015', 5000)
+  into SHOES values(21002, 'Product TB', 'Testoni', 'Casual', '30-Mar-2018', 10000)
+  into SHOES values(21003, 'Product TC', 'Testoni', 'Tracking', '09-Aug-2017', 7000)
+  into SHOES values(21004, 'Product TD', 'Testoni', 'Rough Use', '14-Oct-2016', 12000)
+  into SHOES values(21005, 'Product TE', 'Testoni', 'Fashionable', '25-Apr-2017', 11000)
+select * from dual;
+
+
+
+
+select * from USERS;
+select * from ADDRESS;
+select * from MESSAGE_DETAILS;
+select * from SHOES;

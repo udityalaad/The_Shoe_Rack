@@ -1,0 +1,109 @@
+body {
+	background-image: url("CONTACT US.jpg");
+	background-size: 30%;
+}
+
+
+.header{
+	background-image: url("head-image.jpg");
+	background-size: 50%;
+	color: white;
+	height: 150px;
+}
+
+.header img {
+	float: left;
+	height: 100px;
+}
+
+
+/* Navigation Bar */
+nav {
+	overflow: hidden;
+	background-color: #D3D3D0;
+	color: black;
+}
+
+
+nav a {
+	float: left;
+	color: black;
+	font-size: 17px;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+}
+
+
+nav a.active {
+	background-color: red;
+}
+
+
+.account {
+	float: right;
+	overflow: hidden;
+}
+
+
+.account .dropBtn {
+	font-size: 17px;
+	padding: 14px;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font: inherit;
+	margin: 0;
+	width: 170px;
+}
+
+
+nav a:hover, .account:hover .dropBtn {
+	background-color: red;
+}
+
+
+.account-dropDown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 170px;
+}
+
+
+.account-dropDown-content a {
+	float: none;
+	background-color: #D3D3D0;
+	color: black;
+	display: block;
+	text-align: left;
+}
+
+
+.account-dropDown-content a:hover {
+	background-color: E92929;
+}
+
+
+.account:hover .account-dropDown-content {
+	display: block;
+}
+
+
+
+/* CONTACT US */
+.contactUs {
+	width: 55%;
+	padding: 2em;
+	margin: auto;
+	font-size: 18;
+	color: white;
+	background: linear-gradient(to bottom right, #00cc66 0%, #cc99ff 100%);
+	border-radius: 10px;
+}
+
+
+.contactUs-head {
+	text-align: center;
+}

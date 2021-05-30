@@ -1,0 +1,124 @@
+body {
+	background-image: url("MY ACCOUNT.jpg");
+	background-size:30%;
+}
+
+
+.header{
+	background-image: url("head-image.jpg");
+	background-size: 50%;
+	color: white;
+	height: 150px;
+}
+
+.header img {
+	float: left;
+	height: 100px;
+}
+
+
+/* Navigation Bar */
+nav {
+	overflow: hidden;
+	background-color: #D3D3D0;
+	color: black;
+}
+
+
+nav a {
+	float: left;
+	color: black;
+	font-size: 17px;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+}
+
+
+.account {
+	float: right;
+	overflow: hidden;
+}
+
+
+.account .dropBtn {
+	font-size: 17px;
+	background-color: red;
+	padding: 14px;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	font: inherit;
+	margin: 0;
+	width: 170px;
+}
+
+
+nav a:hover, .account:hover .dropBtn {
+	background-color: red;
+}
+
+
+.account-dropDown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 170px;
+}
+
+
+.account-dropDown-content a {
+	float: none;
+	background-color: #D3D3D0;
+	color: black;
+	display: block;
+	text-align: left;
+}
+
+
+.account-dropDown-content a:hover {
+	background-color: E92929;
+}
+
+
+.account:hover .account-dropDown-content {
+	display: block;
+}
+
+
+
+/* MY ACCOUNT */
+.MyAccount {
+	width: 40%;
+	padding: 3em;
+	padding-top: 0.5em;
+	padding-bottom: 4.3em;
+	margin: auto;
+	font-size: 18;
+	text-align: center;
+	color: white;
+	background: linear-gradient(to top right, #ffff00 0%, #9933ff 100%);
+	border-radius: 10px;
+}
+
+
+table {
+	cellpadding: 2em;
+	text-align: left;
+	margin: auto;
+}
+
+th {
+	padding: 10px;
+}
+
+td {
+	padding: 10px;
+}
+
+
+
+form {
+	border-radius: 4px;
+	text-align: center;
+}
