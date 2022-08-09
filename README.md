@@ -47,7 +47,7 @@ https://github.com/othneildrew/Best-README-Template -->
 ## Built With
   &nbsp; <img src="Read_Me_Content/Tech/Java.JPG" alt="Python" width="90"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="Read_Me_Content/Tech/html.JPG" alt="HTML" width="80"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="Read_Me_Content/Tech/css.JPG" alt="CSS" width="83"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="Read_Me_Content/Tech/js.JPG" alt="JS" width="80"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="Read_Me_Content/Tech/oracle_db.png" alt="JS" width="100"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="Read_Me_Content/Tech/apache_tomcat.png" alt="JS" width="100">
 
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> JSP </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> HTML </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> CSS </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> JavaScript </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> Oracle DB </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> Apache Tomcat </i></b>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> JSP </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> HTML </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> CSS </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> JavaScript </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> Oracle DB </i></b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b><i> Apache Tomcat </i></b>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,6 +79,7 @@ https://github.com/othneildrew/Best-README-Template -->
        4. Run HOME.jsp over Tomcat Server.
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
 <!-- SOME SCREENSHOTS -->
 ## Some Screenshots
    <p align="center">
