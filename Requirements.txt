@@ -1,4 +1,0 @@
-Requirements:
-  • Visual Studio Code (JSP, HTML, JavaScript, CSS)
-  • Oracle Database 10g XE (SQL)
-  • Apache Tomcat 9
