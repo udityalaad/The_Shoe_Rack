@@ -70,13 +70,13 @@ https://github.com/othneildrew/Best-README-Template -->
 
   2. ###### Set Up Application
        1. Get the source code from <b>'/Main Project/Web App - Using JSP/THE SHOE RACK/'</b>
-       2. Update each and every <b>'.jsp'</b> file with the new DB credentials (Set-up in Step-1).
+       2. Update each and every <b>'.jsp'</b> file with the new DB credentials (set-up in Step-1).
 
    3. ###### Run Application
        1. Download, install and set-up <b>Tomcat Server</b>.
-       2. Copy the application source (set-up in Step-2) to Tomcat's root directory.
+       2. Copy the application source code (set-up in Step-2) to Tomcat's root directory.
        3. Start Tomcat Server
-       4. Run HOME.jsp over Tomcat Server.
+       4. Run <b>HOME.jsp</b> over Tomcat Server.
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
